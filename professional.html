@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IS 201 project</title>
+    <link rel="stylesheet" href="professional.css">
+    <link href="fonts.googleapis.com|Open+Sans:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar container">
+            <div class="logo">Esther Bae</div>
+            <ul class="nav-links">
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills & Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h1>Hi, my name is Esther Bae</h1>
+                <p>And this is my project for IS 201.</p>
+                <a href="#contact" class="cta-button">let's get in touch</a>
+            </div>
+        </section>
+
+        <section id="education" class="animate-on-scroll">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="timeline-item">
+                    <h3>Associate of Arts, Secondary Education
+                        <p>Western Wyoming Community College</p></h3>
+                    <p class="date-range">2021 - 2022</p>
+                    <p>Dean's List (2020), Superior Student Scholarship Recipient (2021)</p>
+                    <h3>Bachelor of Science, Sociology
+                        <ul>
+                            <li>Minor in International Development, Business</li></ul>
+                        <p>Brigham Young University</p>
+                    </h3>
+                    <p class="date-range">2024 - Current</p>
+                    <p>Dean's List for the College of Family, Home, and Social Science (2025)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="bg-light animate-on-scroll">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline-item">
+                    <h3>Research Assistant </h3>
+                    <p class="date-range"> August 2025 - Present</p>
+                     <ul> 
+                        <li>Work with BYU faculty to organize and analyze existing data</li> </ul>
+                    <h3>Korean Language Teacher at Provo Missionary Training Center </h3>
+                    <p class="date-range"> January 2025 - Present</p>
+                    <!-- figure out how to make this a bulleted List and fix the spacing--> 
+                    <ul>
+                        <li>Develop and implement engaging lesson plans tailored to students’ diverse learning levels</li>
+                        <li>Monitor student progress, provide constructive feedback, and prepare regular assessments</li>
+                    </ul>
+                    <h3>Receptionist at Western Wyoming Community College</h3>
+                    <p class="date-range"> August 2021 - May 2022</p>
+                    <!-- figure out how to make this a bulleted List -->
+                    <ul>
+                        <li>Managed scheduling and appointments, ensuring accurate calendar coordination</li>
+                    </ul>
+                     <h3>Peet Tutor at Western Wyoming Community College</h3>
+                    <p class="date-range"> August 2021 - May 2022</p>
+                    <!-- figure out how to make this a bulleted List -->
+                    <ul>
+                        <li>Collaborated with faculty and staff to identify student needs and recommend appropriate resources.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="animate-on-scroll">
+            <div class="container">
+                <h2 class="skills-color">Skills and Certifications</h2>
+                <div class="skills-grid">
+                    <div class="skills-color">
+                        <h3>Skills and Languages</h3>
+                        <p>Excel, SQL, HTML, AI. Korean</p>
+                    </div>
+                    <div class="skills-color">
+                        <h3>Certifications</h3>
+                        <p> CITI Social and Behavioral Research Certification </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-light animate-on-scroll">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>Reach out via email or <a href="https://www.linkedin.com/in/esther-bae/"> Linkedin</a></p>
+                <p>Email: <a href="mailto:esthergb@byu.edu">esthergb@byu.edu</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; IS 201 Fall 2025 Esther Bae</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        
+                        entry.target.classList.add('is-visible');
+                    } else {
+                        entry.target.classList.remove('is-visible');
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

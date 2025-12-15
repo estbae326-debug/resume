@@ -1,0 +1,153 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url(images/image3.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+/* Header */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li a {
+    padding: 0.5rem 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+/* Sections */
+section {
+    padding: 100px 0;
+}
+
+.hero-section {
+    background-color: #f4f4f4;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid #ddd;
+    text-align: left;
+}
+
+.date-range {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.skills-color{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    color:#ffffffe4
+}
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* animation (got help from AI) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px); /* Starts 50px below its final position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* Add a small delay so elements appear sequentially when quickly scrolling down */
+    transition-delay: 0.1s; 
+}
+
+/* The state when the element is in the viewport (visible) */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves to its final resting place */
+}
